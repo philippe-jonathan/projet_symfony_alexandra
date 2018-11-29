@@ -1,0 +1,11 @@
+# index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_lucky_number:
+    path: /comments/number
+    controller: App\Controller\CommentsController::number
+
+# inscriptionForm:
+#   path: /comments/addAction
+#     controller: App\Controller\ForumMembersController::addAction

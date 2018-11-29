@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}my forum {% endblock %}
+
+{% block stylesheets %}{% endblock %}
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .banniere { width: 600px; height: 150px; background-position:  center; margin-bottom: 20px; }
+
+
+
+
+</style>
+<!--  **************************bloc de la nav bar************************************ 
+<div id="banniere" class="banniere"></div>
+<div id="menu">        
+<div class="element_menu">
+<h3>Mes options</h3>
+<ul>
+<li>Page 1</li>
+<li>Page 2</li>
+</ul>
+</div>       
+<div class="element_menu">
+<h3>Navigation</h3>
+<ul>
+<li>Page 1</li>
+<li>Page 2</li>
+</ul>
+</div>        
+</div>
+<div id="corps_forum">
+ *****************************************************************************************
+  -->
+<div class="example-wrapper">
+    <h1>Bienvenue sur le Forum des Voyages </h1>
+<h2> Aujourd'hui votre  lucky number is {{ number }}</h2>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'src/Controller/CommentsController.php'|file_link(0) }}">src/Controller/CommentsController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'templates/comments/index.html.twig'|file_link(0) }}">templates/comments/index.html.twig</a></code></li>
+    </ul>
+
+    {# <div>
+        {{render(controller('App\\Controller\\ForumMembersController::recentForum'))}}
+    </div> #}
+  
+  <h3>Formulaire d'annonce</h3>
+
+		<div class="well">
+        {% for forms in form %}
+		  <p>{{ forms }}</p>
+        {% endfor %}
+		</div>
+
+</div>
+{% endblock %}
